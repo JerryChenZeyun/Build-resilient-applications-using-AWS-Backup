@@ -82,7 +82,7 @@ You can choose to encrypt your backups for additional security by specifying a K
 
 
 Then click **CREATE BACKUP VAULT**.
-
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create-backup-vault-popup.png)
 
 
 ### Step3: Enable Notification
