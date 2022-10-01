@@ -102,7 +102,14 @@ Specify a **RESOURCE ASSIGNMENT NAME** such as **BACKUP-RESOURCES** to help iden
 
 Leave the **DEFAULT ROLE** selected for **IAM ROLE**. If a role does not already exist, the AWS Backup service will create one with the necessary permissions.
 
-Under **RESOURCE SELECTION**, you can specify resources to be backed up individually by specifying the **RESOURCE TYPE** and **RESOURCE ID**, or select TAGS and enter the TAG KEY and the TAG VALUE. For this lab, select TAGS as the value for ASSIGN BY, and enter workload as the KEY and myapp as the VALUE. This tag and value was created by the CloudFormation stack. Remember that tags are case sensitive and ensure that the values you enter are all in lower case.
+Under **RESOURCE SELECTION**, you can specify resources to be backed up individually by specifying the **RESOURCE TYPE** and **RESOURCE ID**, or select TAGS and enter the TAG KEY and the TAG VALUE. For this lab, select TAGS key as **workload**, Condition for value as **Equals**, and the Value as **myapp**. This tag and value was created by the CloudFormation stack. Remember that tags are case sensitive and ensure that the values you enter are all in lower case.
+
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/resource-assignment.png)
+
+#### 2.8 Complete Resource Assignment
+Click the **Continue** button to complete the Resource Assignment.
+
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/resource-assignment-continue.png)
 
 ### Step3: Enable Notification
 
