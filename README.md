@@ -41,8 +41,6 @@ Sign in to the AWS Management Console as an IAM user who has PowerUserAccess or 
 Click the following button to deploy the stack. [\
 ![](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2019/10/30/LaunchCFN.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/create/review?stackName=WA-Backup-Lab&templateURL=https://aws-innovate-2022-aws-backup-lab.s3.ap-southeast-2.amazonaws.com/aws-backup-lab.yaml)
 
-
-
 Under **PARAMETERS**:
 
 1. Select an **AvailabilityZone** to launch the resources in.
@@ -53,10 +51,12 @@ Check the box **I acknowledge that AWS CloudFormation might create IAM resources
 
 Click CREATE / CREATE STACK.
 
+The stack takes about 2 minutes to create all the resources. Periodically refresh the page until you see that the **STACK STATUS** is in **CREATE_COMPLETE**. Once the stack is in **CREATE_COMPLETE**, visit the **OUTPUTS** section for the stack and note down the **KEY** and **VALUE** for each of the outputs. This information will be used later in the lab.
 
+You can view the simple application running on the instance by visiting the URL specified in the outputs. If you get an error that says “Connection refused”, wait a couple of minutes and try again.
 
 ### Step2: Create a Backup Plan
-
+Now you will create a backup strategy by leveraging AWS Backup, a fully managed backup service that can automatically backup data from various data sources such as EC2 Instances, EBS Volumes, RDS Databases, and more. You can view a complete list of supported services [here](https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#supported-resources).
 
 ### Step3: Enable Notification
 
