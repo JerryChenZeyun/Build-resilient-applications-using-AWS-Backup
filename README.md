@@ -30,9 +30,12 @@ The skills you learn will help you define a backup and restore plan in alignment
 NOTE: You will be billed for any applicable AWS resources used if you complete this lab that are not covered in the [AWS Free Tier](https://aws.amazon.com/free/).
 
 ## Deploy the Infrastructure and Application
+You may refer to the following solution architectual view. You will use AWS CloudFormation to provision resources needed for this lab. As part of this lab, the CloudFormation stack that you provision will create an EC2 Instance, an SNS Topic, and a Lambda Function. You can view the CloudFormation template [here](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/aws-backup-lab.yaml) for a complete list of all resources that are provisioned. This lab will only work in us-east-1.
+
+![Solution Architect View]([https://github.com/JerryChenZeyun/aws-health-dashboard-organizational-view-2021/blob/main/media/Screen%20Shot%202020-12-13%20at%204.16.09%20pm.png](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/solution-topo.png))
+<br /><br />
 
 ### Step1: Deploy the Infrastructure
-You may refer to the following solution architectual view. You will use AWS CloudFormation to provision resources needed for this lab. As part of this lab, the CloudFormation stack that you provision will create an EC2 Instance, an SNS Topic, and a Lambda Function. You can view the CloudFormation template [here](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/aws-backup-lab.yaml) for a complete list of all resources that are provisioned. This lab will only work in us-east-1.
 
 
 
