@@ -39,7 +39,7 @@ Sign in to the AWS Management Console as an IAM user who has PowerUserAccess or 
 
 #### 1.2 Deploy the infrastructure using AWS CloudFormation
 Click the following button to deploy the stack.
-![](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2019/10/30/LaunchCFN.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https%3A%2F%2Faws-well-architected-labs-virginia.s3.amazonaws.com%2FReliability%2F200_Testing_Backup_and_Restore_of_Data%2Fbackup-lab.yaml&stackName=WA-Backup-Lab)
+![](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2019/10/30/LaunchCFN.png)(https://aws-innovate-2022-aws-backup-lab.s3.ap-southeast-2.amazonaws.com/aws-backup-lab.yaml)
 
 
 
