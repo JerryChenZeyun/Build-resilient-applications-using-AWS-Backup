@@ -15,3 +15,11 @@ In this lab, you will create an EC2 Instance as a data source. You will then cre
 
 The skills you learn will help you define a backup and restore plan in alignment with the [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/?wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc&wa-guidance-whitepapers.sort-by=item.additionalFields.sortDate&wa-guidance-whitepapers.sort-order=desc).
 
+## Goals:
+* Create a Backup Strategy to ensure mission-critical data is being backed up regularly
+* Test restoring from backups to ensure there are no data recovery issues
+* Learn how to automate this process
+
+
+
+
