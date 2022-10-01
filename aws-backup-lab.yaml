@@ -1,23 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  AWS CloudFormation Sample Template to create lab resources. Creates an EC2
-  Instance, an SNS Topic, and a Lambda Function in a new VPC.
-
-  **WARNING** You will be billed for the AWS resources created if you create a
-  stack from this template.
-
-  Copyright 2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
-  Licensed under the Apache License, Version 2.0 (the "License"). You may not
-  use this file except in compliance with the License. A copy of the License is
-  located at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  or in the "license" file accompanying this file. This file is distributed  on
-  an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-  or implied. See the License for the specific language governing permissions
-  and limitations under the License.
+  This lab is provided as part of AWS Innovate For Every Application Edition
+  https://aws.amazon.com/events/aws-innovate/apj/for-every-app/
 Parameters:
   NotificationEmail:
     Type: String
@@ -30,21 +14,36 @@ Parameters:
     Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
 Resources:
   BackupRole:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: AWS-Backup-LAB-Cusom-Role
-      AssumeRolePolicyDocument:
-        Version: '2012-10-17'
-        Statement:
-        - Effect: Allow
-          Principal:
-            Service:
-              - "backup.amazonaws.com"
+      Type: AWS::IAM::Role
+      Properties:
+        RoleName: AWS-Backup-LAB-Cusom-Role
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Principal:
+              Service: backup.amazonaws.com
             Action:
-              - sts:AssumeRole
-            ManagedPolicyArns:
-              - arn:aws:iam::aws:policy/AWSBackupServiceRolePolicyForBackup
-              - arn:aws:iam::aws:policy/AWSBackupServiceRolePolicyForRestores
+            - sts:AssumeRole
+        ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForBackup
+        - arn:aws:iam::aws:policy/service-role/AWSBackupServiceRolePolicyForRestores
+        Policies:
+          - PolicyName: IAM-PASS-ROLE-POLICY
+            PolicyDocument: 
+              Version: "2012-10-17"
+              Statement:
+                - Effect: Allow
+                  Action: 'iam:PassRole'
+                  Resource: !Join
+                    - ''
+                    - - 'arn:aws:iam::'
+                      - !Join
+                        - ''
+                        - - !Ref "AWS::AccountId"
+                          - !Join
+                            - ''
+                            - - ':role/*'
   VPC:
     Type: 'AWS::EC2::VPC'
     Properties:
