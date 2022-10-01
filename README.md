@@ -16,10 +16,12 @@ In this lab, you will create an EC2 Instance as a data source. You will then cre
 The skills you learn will help you define a backup and restore plan in alignment with the [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/?wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc&wa-guidance-whitepapers.sort-by=item.additionalFields.sortDate&wa-guidance-whitepapers.sort-order=desc).
 
 ## Goals:
-* Create a Backup Strategy to ensure mission-critical data is being backed up regularly
-* Test restoring from backups to ensure there are no data recovery issues
+* Set up a Backup Strategy to ensure mission-critical data is being backed up regularly
+* Test restoring from EC2 image backups to ensure there are no data recovery issues
 * Learn how to automate this process
 
-
+## Prerequisites:
+* An [AWS Account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) that you are able to use for testing, that is not used for production or other purposes.
+* An IAM user or role in your AWS account that has Administrator privileges. Launch the CloudFormation Stack to provision resources that will act as data sources.
 
 
