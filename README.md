@@ -34,8 +34,8 @@ You may refer to the following solution architectual view. You will use AWS Clou
 <br /><br />
 
 ### Step1: Deploy the Infrastructure
-
-
+#### 1.1 Log into the AWS console
+Sign in to the AWS Management Console as an IAM user who has PowerUserAccess or AdministratorAccess permissions, to ensure successful execution of this lab.
 
 ### Step2: Create a Backup Plan
 
