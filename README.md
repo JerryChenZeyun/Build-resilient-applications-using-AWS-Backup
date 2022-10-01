@@ -84,6 +84,14 @@ You can choose to encrypt your backups for additional security by specifying a K
 Then click **CREATE BACKUP VAULT**.
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create-backup-vault-popup.png)
 
+#### 2.5 Complete the Backup plan creation
+Once the Backup Vault has been created, you can set a **SCHEDULE** for the backup, you can specify the **FREQUENCY** at which backups are taken. You can enter frequency as every 12 hours, Daily, Weekly, or Monthly. Alternatively, you can specify a custom **CRON EXPRESSION** for your backup frequency. For this exercise, select the **FREQUENCY** as **DAILY**.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/rest-part-of-backup-plan-creation.png)
+
+Leave the other configuration as **DEFAULT**. And then click **Create Plan** button to complete the backup plan creation.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create-backup-rule-plan.png)
+
+
 
 ### Step3: Enable Notification
 
