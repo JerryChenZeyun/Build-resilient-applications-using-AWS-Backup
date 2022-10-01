@@ -60,6 +60,10 @@ Now you will create a backup strategy by leveraging AWS Backup, a fully managed 
 
 #### 2.1 [Sign in to the AWS Backup console](https://us-east-1.console.aws.amazon.com/backup/home?region=us-east-1#backupplan)
 
+#### 2.2 Choose **"CREATE BACKUP PLAN"**
+
+
+
 ### Step3: Enable Notification
 
 
