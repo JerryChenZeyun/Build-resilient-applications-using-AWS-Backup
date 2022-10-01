@@ -58,6 +58,8 @@ You can view the simple application running on the instance by visiting the URL 
 ### Step2: Create a Backup Plan
 Now you will create a backup strategy by leveraging AWS Backup, a fully managed backup service that can automatically backup data from various data sources such as EC2 Instances, EBS Volumes, RDS Databases, and more. You can view a complete list of supported services [here](https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#supported-resources).
 
+#### 2.1 [Sign in to the AWS Backup console](https://us-east-1.console.aws.amazon.com/backup/home?region=us-east-1#backupplan)
+
 ### Step3: Enable Notification
 
 
