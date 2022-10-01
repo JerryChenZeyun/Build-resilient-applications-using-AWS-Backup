@@ -60,8 +60,8 @@ Now you will create a backup strategy by leveraging AWS Backup, a fully managed 
 
 #### 2.1 [Sign in to the AWS Backup console](https://us-east-1.console.aws.amazon.com/backup/home?region=us-east-1#backupplan)
 
-#### 2.2 Choose **"CREATE BACKUP PLAN"**
-
+#### 2.2 Choose "CREATE BACKUP PLAN"
+![Image of Yaktocat](https://github.com/JerryChenZeyun/aws-health-api-organization-view/blob/master/media/Screen%20Shot%202020-05-05%20at%209.33.32%20pm.png)
 
 
 ### Step3: Enable Notification
