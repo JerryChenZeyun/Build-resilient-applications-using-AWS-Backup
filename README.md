@@ -91,7 +91,18 @@ Once the Backup Vault has been created, you can set a **SCHEDULE** for the backu
 Leave the other configuration as **DEFAULT**. And then click **Create Plan** button to complete the backup plan creation.
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create-backup-rule-plan.png)
 
+Once the backup plan and the backup rule has been created, you can specify resources to back up. You can select individual resources to be backed up, or specify a tag (key-value) associated with the resource. AWS Backup will execute backup jobs on all resources that match the tags specified.
 
+#### 2.6 Review the BACKUP PLAN that's been created
+Click on **BACKUP PLANS** from the menu on the left side of the screen. Select the backup plan **BACKUP-LAB** that you just created.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/backup-lab-assign-resource.png)
+
+#### 2.7 Set up the Resource Assignment for Backup Plan
+Specify a **RESOURCE ASSIGNMENT NAME** such as **BACKUP-RESOURCES** to help identify the resources that are being backed up.
+
+Leave the **DEFAULT ROLE** selected for **IAM ROLE**. If a role does not already exist, the AWS Backup service will create one with the necessary permissions.
+
+Under **RESOURCE SELECTION**, you can specify resources to be backed up individually by specifying the **RESOURCE TYPE** and **RESOURCE ID**, or select TAGS and enter the TAG KEY and the TAG VALUE. For this lab, select TAGS as the value for ASSIGN BY, and enter workload as the KEY and myapp as the VALUE. This tag and value was created by the CloudFormation stack. Remember that tags are case sensitive and ensure that the values you enter are all in lower case.
 
 ### Step3: Enable Notification
 
