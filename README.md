@@ -111,8 +111,19 @@ Click the **Continue** button to complete the Resource Assignment.
 
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/resource-assignment-continue.png)
 
+You have successfully created a backup plan for your data sources, and all supported resources with the tags workload=myapp will be backed up automatically, at the frequency specified.
+
 ### Step3: Enable Notification
 
+In the cloud, setting up notifications to be aware of events within your workload is easily achieved. AWS Backup leverages AWS SNS to send notifications related to backup activities that are occurring. This will allow visibility into backup job statuses, restore job statuses, or any failures that may have occurred, allowing your Operations teams to respond appropriately.
+
+1. Open a terminal where you have access to the AWS CLI. Ensure that the CLI is up to date and that you have AWS Administrator Permissions to run AWS CLI commands.
+https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
+
+2. Edit the following AWS CLI command and include the **ARN** of the **SNS TOPIC** that you created. Replace with the **ARN** of the **SNS TOPIC** obtained from the outputs section of the CloudFormation Stack. **Note that the backup vault name is case sensitive.**
+```
+aws backup put-backup-vault-notifications --region us-east-1 --backup-vault-name BACKUP-LAB-VAULT --backup-vault-events BACKUP_JOB_COMPLETED RESTORE_JOB_COMPLETED --sns-topic-arn <YOUR SNS TOPIC ARN>
+```
 
 ### Step4: Test Restoration
 
