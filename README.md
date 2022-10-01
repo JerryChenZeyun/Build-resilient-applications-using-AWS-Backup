@@ -37,6 +37,15 @@ You may refer to the following solution architectual view. You will use AWS Clou
 #### 1.1 Log into the AWS console
 Sign in to the AWS Management Console as an IAM user who has PowerUserAccess or AdministratorAccess permissions, to ensure successful execution of this lab.
 
+#### 1.2 Deploy the infrastructure using AWS CloudFormation
+Click [here](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateUrl=https%3A%2F%2Faws-well-architected-labs-virginia.s3.amazonaws.com%2FReliability%2F200_Testing_Backup_and_Restore_of_Data%2Fbackup-lab.yaml&stackName=WA-Backup-Lab) to deploy the stack.
+
+Under **PARAMETERS**:
+
+1. Select an **AvailabilityZone** to launch the resources in.
+2. For **LatestAmiId** leave the default value. This will automatically retrieve the latest AMI ID for Amazon Linux 2.
+3. Specify an email address that you have access to for **NotificationEmail**.
+
 ### Step2: Create a Backup Plan
 
 
