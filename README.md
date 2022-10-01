@@ -66,7 +66,7 @@ Now you will create a backup strategy by leveraging AWS Backup, a fully managed 
 #### 2.3 Select the option to BUILD A NEW PLAN
 
 Specify a **Backup plan name** such as **BACKUP-LAB**.
-
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/build-a-new-plan.png)
 
 
 ### Step3: Enable Notification
