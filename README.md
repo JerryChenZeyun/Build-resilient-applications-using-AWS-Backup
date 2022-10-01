@@ -69,6 +69,19 @@ Specify a **Backup plan name** such as **BACKUP-LAB**.
 
 #### 2.4 Configure the Backup Rule
 Give the Backup Rule a name, such as **BACKUP-LAB-RULE**.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/BACKUP-RULE-CREATION.png)
+
+##### 2.4.1 Configure Backup vault
+Click the **Create new Backup vault** button. 
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/click-create-backup-vault.png)
+
+In the popup window, input the **BACKUP VAULT NAME**, such as **BACKUP-LAB-VAULT**.
+
+
+You can choose to encrypt your backups for additional security by specifying a KMS key. You can choose the default key created and managed by AWS Backup or specify your own custom key. For this exercise, select the default key (default) aws/backup.
+
+
+Then click **CREATE BACKUP VAULT**.
 
 
 
