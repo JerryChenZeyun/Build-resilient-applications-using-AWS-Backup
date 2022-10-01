@@ -2,7 +2,9 @@
 
 This lab is provided as part of **[AWS Innovate For Every Application Edition](https://aws.amazon.com/events/aws-innovate/apj/for-every-app/)**
 
-Click [here](https://github.com/phonghuule/aws-innovate-fea-2022) to explore the full list of hands-on labs.
+Click [
+
+](https://github.com/phonghuule/aws-innovate-fea-2022) to explore the full list of hands-on labs.
 
 ℹ️ You will run this lab in your own AWS account. Please follow directions at the end of the lab to remove resources to avoid future costs.
 
@@ -23,5 +25,32 @@ The skills you learn will help you define a backup and restore plan in alignment
 ## Prerequisites:
 * An [AWS Account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) that you are able to use for testing, that is not used for production or other purposes.
 * An IAM user or role in your AWS account that has Administrator privileges. Launch the CloudFormation Stack to provision resources that will act as data sources.
+
+## Note
+NOTE: You will be billed for any applicable AWS resources used if you complete this lab that are not covered in the [AWS Free Tier](https://aws.amazon.com/free/).
+
+## Deploy the Infrastructure and Application
+
+### Step1: Deploy the Infrastructure
+You may refer to the following solution architectual view. You will use AWS CloudFormation to provision resources needed for this lab. As part of this lab, the CloudFormation stack that you provision will create an EC2 Instance, an SNS Topic, and a Lambda Function. You can view the CloudFormation template [here](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/aws-backup-lab.yaml) for a complete list of all resources that are provisioned. This lab will only work in us-east-1.
+
+
+
+### Step2: Create a Backup Plan
+
+
+### Step3: Enable Notification
+
+
+### Step4: Test Restoration
+
+
+### Step5: Tear Down
+
+
+
+
+
+
 
 
