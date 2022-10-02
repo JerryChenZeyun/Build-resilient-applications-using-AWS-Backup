@@ -200,6 +200,11 @@ restore_request = backup.start_restore_job(
 
 16. Note down the RESOURCE ID of the newly created EC2 Instance and verify that it exists from the EC2 Console - <br />https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=instanceState. <br />Note down the public IP of the new EC2 Instance.
 
+17. Monitor your email to see if you have received a **Notification from AWS Backup** confirming the restore job was successful. Compare details in the email to what you see on the AWS Console, they should match. It takes about 10 mins for the email to show up once the restore job has completed.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/sns-restore-job-complete.png)
+
+
+
 
 ### Step5: Tear Down
 
