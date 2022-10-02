@@ -152,6 +152,17 @@ https://us-east-1.console.aws.amazon.com/backup/home?region=us-east-1#home
 4. Under **BACKUP WINDOW**, ensure that the **CREATE BACKUP NOW** option is selected.
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create-on-demand-backup.png)
 
+5. Under **RETENTION PERIOD**, select the option DAYS AFTER CREATION and enter 1 for the value for this lab. This will ensure that the backup is deleted after 1 day.
+
+6. Under **Backup Vault**, select the **BACKUP-LAB-VAULT**.
+
+7. Leave the default IAM role selected.
+
+8. Click **CREATE ON-DEMAND BACKUP**.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/complete-on-demand-backup-creation.png)
+
+
+
 
 ### Step5: Tear Down
 
