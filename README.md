@@ -139,6 +139,10 @@ You have now successfully enabled notifications for the backup vault BACKUP-LAB-
 
 ### Step4: Test Restoration
 
+For the purpose of this lab, we will simulate the action performed by AWS Backup when creating backups of data sources by creating an on-demand backup to see if the backup is successful. Once the backup is completed, you will receive a notification stating that the backup job has completed and the lambda function will get invoked. The Lambda function will make API calls to start restoring data from the backup that was created. This will help ascertain that the backup is good. Once the restore process has been completed, you will receive another notification confirming this, and the lambda function will get invoked again to clean up new resources that were created as part of the restore. Once the cleanup has been completed, you will receive one last notification confirming cleanup.
+
+1. Use your administrator account to access the AWS Backup console
+https://us-east-1.console.aws.amazon.com/backup/home?region=us-east-1#home
 
 ### Step5: Tear Down
 
