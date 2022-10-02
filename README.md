@@ -212,6 +212,28 @@ http://<PUBLIC_IP_OF_THE_NEW_INSTANCE>/
 ```
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/lambda-code.png)
 
+19. Monitor your email to see if you have received a **Restore Test Status** notification confirming the deletion of the newly created resource. Check the EC2 Console to verify that the new EC2 Instance has been terminated. - <br />https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Volumes:sort=size
+
+20. Use your administrator account to access the AWS CloudWatch console -<br /> https://console.aws.amazon.com/cloudwatch/home?region=us-east-1
+
+21. Click on **LOGS** from the menu on the left side.
+
+22. For filter, paste the following string after replacing the value for the name of the CloudFormation stack that was created as part of this lab.
+
+```
+/aws/lambda/RestoreTestFunction-<YOUR CLOUDFORMATION STACK NAME>
+```
+
+23. Click on the **LOG STREAM** and view the output of the Lambda function’s execution to understand the different steps performed by the function to automate this process.
+
+#### Review of Best Practices Implemented
+
+**Identify all data that needs to be backed up and perform backups or reproduce the data from sources:** Back up important data using Amazon S3, Amazon EBS snapshots, or third-party software. Alternatively, if the data can be reproduced from sources to meet RPO, you may not require a backup.
+
+Perform data backup automatically or reproduce the data from sources automatically: Automate backups or the reproduction from sources using AWS features (for example, snapshots of Amazon RDS and Amazon EBS, versions on Amazon S3, etc.), AWS Marketplace solutions, or third-party solutions.
+
+Perform periodic recovery of the data to verify backup integrity and processes: Validate that your backup process implementation meets Recovery Time Objective and Recovery Point Objective through a recovery test.
+
 
 
 ### Step5: Tear Down
