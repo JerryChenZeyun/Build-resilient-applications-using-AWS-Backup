@@ -144,6 +144,15 @@ For the purpose of this lab, we will simulate the action performed by AWS Backup
 1. Use your administrator account to access the AWS Backup console<br />
 https://us-east-1.console.aws.amazon.com/backup/home?region=us-east-1#home
 
+2. Click on **CREATE AN ON-DEMAND BACKUP** in the middle of the screen.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/on-demand-backup.png)
+
+3. Under **RESOURCE TYPE**, select **EC2**. Paste in the **Instance ID** obtained from the Output of the CloudFormation Stack.
+
+4. Under **BACKUP WINDOW**, ensure that the **CREATE BACKUP NOW** option is selected.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create-on-demand-backup.png)
+
+
 ### Step5: Tear Down
 
 
