@@ -203,6 +203,14 @@ restore_request = backup.start_restore_job(
 17. Monitor your email to see if you have received a **Notification from AWS Backup** confirming the restore job was successful. Compare details in the email to what you see on the AWS Console, they should match. It takes about 10 mins for the email to show up once the restore job has completed.
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/sns-restore-job-complete.png)
 
+18. While waiting for the notification, let’s take a look at the relevant sections of the Lambda function code to see what happens when a restore job is completed. You can view the full Lambda function code [here](https://wellarchitectedlabs.com/Reliability/200_Testing_Backup_and_Restore_of_Data/Code/lambda_function.py).
+
+After receiving confirmation from AWS Backup that the restore job has completed successfully, the Lambda function will verify data recovery. To do this, an API call is made to retrieve the public IP address of the new EC2 Instance. It makes an HTTP GET request to the new EC2 Instance to check if the application is running. If a valid response (200 in this case) is received, it is ascertained that data recovery was successful as per the recovery success criteria that was established earlier in this section. The Lambda function will then make an API call to EC2 to terminate the new EC2 Instance to save on cost. You can manually verify this as well by visiting the following URL:
+
+```
+http://<PUBLIC_IP_OF_THE_NEW_INSTANCE>/
+```
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/lambda-code.png)
 
 
 
