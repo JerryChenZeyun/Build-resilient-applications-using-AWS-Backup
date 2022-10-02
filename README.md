@@ -176,6 +176,8 @@ https://us-east-1.console.aws.amazon.com/backup/home?region=us-east-1#home
 
 14. Let’s take a look at the relevant section of the Lambda function code to understand what will happen once the backup job is completed and a notification has been received. You can view the full Lambda function code [here](https://wellarchitectedlabs.com/Reliability/200_Testing_Backup_and_Restore_of_Data/Code/lambda_function.py).
 
+The Lambda function first obtains the [recovery point restore metadata](https://docs.aws.amazon.com/cli/latest/reference/backup/get-recovery-point-restore-metadata.html) for the recovery point that was created when the on-demand backup job was initiated.
+
 ### Step5: Tear Down
 
 
