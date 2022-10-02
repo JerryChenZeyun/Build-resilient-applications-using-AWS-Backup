@@ -7,6 +7,9 @@ Click [here](https://github.com/phonghuule/aws-innovate-fea-2022) to explore the
 ℹ️ You will run this lab in your own AWS account. Please follow directions at the end of the lab to remove resources to avoid future costs.
 
 ## Introduction
+
+This lab was derived from one of Operataional Excellence Labs named [TESTING BACKUP AND RESTORE OF DATA](https://wellarchitectedlabs.com/reliability/200_labs/200_testing_backup_and_restore_of_data/) in AWS Well-Architected Lab with latest update.
+
 The purpose of this lab is to teach you how to use [AWS backup](https://aws.amazon.com/backup/) to achieve automatic data backup, so as to build resilient applications with well defined data backup strategy.
 
 Create backup of the data is just first step to enhance data resilience. You as data owner must also test these backups to ensure they can be used to recover data. A backup is useless if you are unable to restore your data from it. Testing the restore process after each backup will ensure you are aware of any issues that might arise during a restore down the line.
@@ -263,12 +266,16 @@ The following instructions will remove the resources that you have created in th
 #### Cleaning up the CloudWatch Logs
 
 1. Sign in to the AWS Management Console, and open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/ .
-Click Logs in the left navigation.
-Click the radio button on the left of the /aws/lambda/RestoreTestFunction.
-Click the Actions Button then click Delete Log Group.
-Verify the log group name then click Yes, Delete.
 
+2. Click **Logs** in the left navigation, and then select **Log groups**.
 
+3. Click the check box on the left of the **/aws/lambda/RestoreTestFunction**.
+
+4. Click the **Actions Button** then click **Delete Log Group**.
+
+5. Verify the log group name then click **Delete**.
+
+### Thank you for using this lab!
 
 
 
