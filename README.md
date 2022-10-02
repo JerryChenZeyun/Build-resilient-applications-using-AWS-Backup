@@ -230,11 +230,9 @@ http://<PUBLIC_IP_OF_THE_NEW_INSTANCE>/
 
 **Identify all data that needs to be backed up and perform backups or reproduce the data from sources:** Back up important data using Amazon S3, Amazon EBS snapshots, or third-party software. Alternatively, if the data can be reproduced from sources to meet RPO, you may not require a backup.
 
-Perform data backup automatically or reproduce the data from sources automatically: Automate backups or the reproduction from sources using AWS features (for example, snapshots of Amazon RDS and Amazon EBS, versions on Amazon S3, etc.), AWS Marketplace solutions, or third-party solutions.
+**Perform data backup automatically or reproduce the data from sources automatically:** Automate backups or the reproduction from sources using AWS features (for example, snapshots of Amazon RDS and Amazon EBS, versions on Amazon S3, etc.), AWS Marketplace solutions, or third-party solutions.
 
-Perform periodic recovery of the data to verify backup integrity and processes: Validate that your backup process implementation meets Recovery Time Objective and Recovery Point Objective through a recovery test.
-
-
+**Perform periodic recovery of the data to verify backup integrity and processes:** Validate that your backup process implementation meets Recovery Time Objective and Recovery Point Objective through a recovery test.
 
 ### Step5: Tear Down
 
