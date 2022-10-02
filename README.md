@@ -236,9 +236,27 @@ http://<PUBLIC_IP_OF_THE_NEW_INSTANCE>/
 
 ### Step5: Tear Down
 
+The following instructions will remove the resources that you have created in this lab.
 
+#### Cleaning up AWS Backup Resources
 
+1. Sign in to the AWS Management Console and navigate to the AWS Backup console - <br />https://us-east-1.console.aws.amazon.com/backup/home?region=us-east-1#home
 
+2. Click on **BACKUP VAULTS** from the menu on the left side, and select **BACKUP-LAB-VAULT**.
+
+3. Under the section **Recovery points**, delete all the RECOVERY POINTS.
+
+4. Once all the **RECOVERY POINTS** have been deleted, delete the **Backup Vault** by clicking on **DELETE VAULT** on the top right hand corner.
+
+5. Click on **BACKUP PLANS** from the menu on the left side, and select **BACKUP-LAB**.
+
+6. Scroll down to the section **RESOURCE ASSIGNMENTS**, and delete the resource assignment.
+
+7. Delete the **BACKUP PLAN** by clicking on **DELETE** on the upper right corner of the screen.
+
+#### Cleaning up the CloudFormation Stack
+
+1. Sign in to the AWS Management Console and navigate to the AWS CloudFormation console -<br /> https://console.aws.amazon.com/cloudformation/
 
 
 
