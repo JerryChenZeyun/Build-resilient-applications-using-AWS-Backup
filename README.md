@@ -8,7 +8,7 @@ Click [here](https://github.com/phonghuule/aws-innovate-fea-2022) to explore the
 
 ## Introduction
 
-This lab was derived from one of Operataional Excellence Labs named [TESTING BACKUP AND RESTORE OF DATA](https://wellarchitectedlabs.com/reliability/200_labs/200_testing_backup_and_restore_of_data/) in AWS Well-Architected Lab with latest update.
+This lab was derived from one of **Well-Architected Reliability Labs** named [TESTING BACKUP AND RESTORE OF DATA](https://wellarchitectedlabs.com/reliability/200_labs/200_testing_backup_and_restore_of_data/) in AWS Well-Architected Lab with latest update.
 
 The purpose of this lab is to teach you how to use [AWS backup](https://aws.amazon.com/backup/) to achieve automatic data backup, so as to build resilient applications with well defined data backup strategy.
 
