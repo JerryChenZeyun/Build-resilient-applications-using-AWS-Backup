@@ -198,7 +198,7 @@ restore_request = backup.start_restore_job(
 15. Go back to **JOBS** and switch to the **RESTORE JOBS** tab. You should see a **RESTORE JOB** running (or completed, depending on when you look at it). The lambda function that was created as part of this lab has requested a restore job from AWS Backup. This is to ensure data recovery from the backup is successful.
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/restore-job-completed.png)
 
-16. Note down the RESOURCE ID of the newly created EC2 Instance and verify that it exists from the EC2 Console - https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=instanceState. Note down the public IP of the new EC2 Instance.
+16. Note down the RESOURCE ID of the newly created EC2 Instance and verify that it exists from the EC2 Console - <br />https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=instanceState. <br />Note down the public IP of the new EC2 Instance.
 
 
 ### Step5: Tear Down
