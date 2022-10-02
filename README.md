@@ -178,6 +178,23 @@ https://us-east-1.console.aws.amazon.com/backup/home?region=us-east-1#home
 
 The Lambda function first obtains the [recovery point restore metadata](https://docs.aws.amazon.com/cli/latest/reference/backup/get-recovery-point-restore-metadata.html) for the recovery point that was created when the on-demand backup job was initiated.
 
+```
+metadata = backup.get_recovery_point_restore_metadata(
+          BackupVaultName=backup_vault_name,
+          RecoveryPointArn=recovery_point_arn
+      )
+```
+
+Once the recovery point restore metadata has been retrieved, the function will then use this to make an API call to AWS Backup to start a restore job.
+
+```
+restore_request = backup.start_restore_job(
+              RecoveryPointArn=recovery_point_arn,
+              IamRoleArn=iam_role_arn,
+              Metadata=metadata['RestoreMetadata']
+      )
+```
+
 ### Step5: Tear Down
 
 
