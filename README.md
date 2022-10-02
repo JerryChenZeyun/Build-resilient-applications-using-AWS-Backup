@@ -125,10 +125,29 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html
 aws backup put-backup-vault-notifications --region us-east-1 --backup-vault-name BACKUP-LAB-VAULT --backup-vault-events BACKUP_JOB_COMPLETED RESTORE_JOB_COMPLETED --sns-topic-arn <YOUR SNS TOPIC ARN>
 ```
 
+3. Once edited, run the above command, it will enable notifications with messages published to the **SNS TOPIC** every time a backup or restore job is completed. This will ensure the Operations team is aware of any failures with backing up or restoring data.
+
+4. You can verify that notifications have been enabled by running the following command. The output will include a section called **SNSTopicArn** followed by the ARN of the SNS Topic that was created as part of the lab.
+
+```
+aws backup get-backup-vault-notifications --backup-vault-name BACKUP-LAB-VAULT --region us-east-1
+```
+
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/verify-sns.png)
+
+You have now successfully enabled notifications for the backup vault BACKUP-LAB-VAULT, ensuring that the Operations team is aware of completion of backup and restore activities involving this vault, and any failures associated with those activities.
+
 ### Step4: Test Restoration
 
 
 ### Step5: Tear Down
+
+
+
+
+
+
+
 
 
 
