@@ -258,10 +258,15 @@ The following instructions will remove the resources that you have created in th
 
 1. Sign in to the AWS Management Console and navigate to the AWS CloudFormation console -<br /> https://console.aws.amazon.com/cloudformation/
 
+2. Select the stack **WA-Backup-Lab**, and delete the stack.
 
+#### Cleaning up the CloudWatch Logs
 
-
-
+1. Sign in to the AWS Management Console, and open the CloudWatch console at https://console.aws.amazon.com/cloudwatch/ .
+Click Logs in the left navigation.
+Click the radio button on the left of the /aws/lambda/RestoreTestFunction.
+Click the Actions Button then click Delete Log Group.
+Verify the log group name then click Yes, Delete.
 
 
 
