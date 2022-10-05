@@ -245,13 +245,23 @@ http://<PUBLIC_IP_OF_THE_NEW_INSTANCE>/
 In this optional step, you will use Resilience Hub to assess and improve the resiliency of the application architecture based on its recommendations.
 
 1. Sign in to the AWS Management Console and navigate to the AWS Backup console - <br />
-https://us-east-1.console.aws.amazon.com/resiliencehub/home?region=us-east-1#/homepage
+(https://us-east-1.console.aws.amazon.com/resiliencehub/home?region=us-east-1#/homepage)
 
 
 2. Click the **Add Application** button to add the web application you've deployed to AWS Resilience Hub.
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/resilience-hub-add-app.png)
 
-3. In the **Discover application structure** page, select **CloudFormation stacks**, 
+3. In the **Discover application structure** page, select **CloudFormation stacks**.
+
+4. Select **WA-Backup-Lab** CloudFormation stack in the **Select stacks**.
+
+5. Give it a name to the **Application name**, such as **WEB-WA-APP**, with an app description (optional).
+
+6. Tick the check box under the **Scheduled assessment**.
+
+7. Review the above settings, then click **Next** button.
+
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/discover-app-structure.png)
 
 
 ### Step6: Tear Down
