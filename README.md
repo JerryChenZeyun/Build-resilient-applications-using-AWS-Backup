@@ -272,24 +272,21 @@ In this step, you will use Resilience Hub to assess and improve the resiliency o
 
 11. Give the policy a name, e.g. **WA-LAB-RESILIENCY-POLICY**, with a description (optional).
 
-12. Under the **Suggested resiliency policies**, select the **Important Application**. This sets the RTO (2 days) and RPO (2h) for the resiliency policy. Then click **Create** button.
+12. Under the **Suggested resiliency policies**, select the **Important Application**. This sets the RTO (2 days) and RPO (4 hours) for the resiliency policy. Then click **Create** button.
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create-resiliency-policy-details.png)
 
-13. Click the [Applications](https://us-east-1.console.aws.amazon.com/resiliencehub/home?region=us-east-1#/applications) on the left of the page. Select the **WEB-WA-APP**.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/SELECT-APP.png)
+13. Select the **WA-LAB-RESILIENCY-POLICY**, then click **Next** button.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/select-policy-button.png)
 
-14. Click the **Publish application** button.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/publish-app.png)
+14. Review the application configuration, and then click **Publish** button in the **Review and publish** page.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/publish-app-with-policy.png)
 
-15. Review the application components, where AWS Resilience Hub supports services such as EC2 instance, Lambda function. Then click **Publish new version** button. Click **Publish** button in the pop up window to confirm.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/publish-new-version.png)
-
-16. Click the **Assess resiliency** button to initiate the application resiliency assessment through AWS Resilience Hub. Click **Run** button in the pop up window to confirm.
+15. Click the **Assess resiliency** button in the application page to initiate the application resiliency assessment through AWS Resilience Hub. Click **Run** button in the pop up window to confirm.
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/assess-resiliency.png)
 
-17. 
+16. 
 
-18.
+17.
 
 ### Step6: Tear Down
 
