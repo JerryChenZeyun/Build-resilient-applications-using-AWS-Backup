@@ -310,7 +310,17 @@ Please note that for the sake of simplicity, this lab application utilises a mon
 
 The following instructions will remove the resources that you have created in this lab.
 
-####
+#### Cleaning up AWS Resilience Hub Resources
+
+1. Sign in to the AWS Management Console and navigate to the AWS Backup console - <br />https://us-east-1.console.aws.amazon.com/resiliencehub/home?region=us-east-1#/dashboard
+
+2. Click on **Applications** and select the **WEB-WA-APP**, then click **Delete** under the **Actions** button.
+
+3. Type in **Delete** in the pop up window to proceed.
+
+4. Click on **Policies**, select **WA-LAB-RESILIENCY-POLICY**, then click **Delete** under the **Actions** button.
+
+5. Type in **Delete** in the pop up window to proceed.
 
 #### Cleaning up AWS Backup Resources
 
