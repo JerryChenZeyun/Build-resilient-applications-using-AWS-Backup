@@ -238,7 +238,11 @@ http://<PUBLIC_IP_OF_THE_NEW_INSTANCE>/
 **Perform periodic recovery of the data to verify backup integrity and processes:** Validate that your backup process implementation meets Recovery Time Objective and Recovery Point Objective through a recovery test.
 
 
-### Step6: (OPTIONAL STEP) Validating Application Resiliency via AWS Resilience Hub
+### Step5: (OPTIONAL STEP) Validating Application Resiliency via AWS Resilience Hub
+
+[AWS Resilience Hub](https://aws.amazon.com/resilience-hub/) is a new service that helps you understand and improve the resiliency of your workloads using AWS Well-Architected best practices.
+
+
 
 
 ### Step6: Tear Down
