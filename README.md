@@ -33,7 +33,7 @@ NOTE: You will be billed for any applicable AWS resources used if you complete t
 ## Deploy the Infrastructure and Application
 You may refer to the following solution architectual view. You will use AWS CloudFormation to provision resources needed for this lab. As part of this lab, the CloudFormation stack that you provision will create an EC2 Instance, an SNS Topic, and a Lambda Function. You can view the CloudFormation template [here](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/aws-backup-lab.yaml) for a complete list of all resources that are provisioned. This lab will **only work in us-east-1**.
 
-![Solution Architect View](/images/solution-topo.png)
+![Solution Architect View](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/solution-topo1.png)
 <br /><br />
 
 ### Step1: Deploy the Infrastructure
