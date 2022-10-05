@@ -237,7 +237,11 @@ http://<PUBLIC_IP_OF_THE_NEW_INSTANCE>/
 
 **Perform periodic recovery of the data to verify backup integrity and processes:** Validate that your backup process implementation meets Recovery Time Objective and Recovery Point Objective through a recovery test.
 
-### Step5: Tear Down
+
+### Step6: (OPTIONAL STEP) Validating Application Resiliency via AWS Resilience Hub
+
+
+### Step6: Tear Down
 
 The following instructions will remove the resources that you have created in this lab.
 
