@@ -281,6 +281,15 @@ In this optional step, you will use Resilience Hub to assess and improve the res
 14. Click the **Publish application** button.
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/publish-app.png)
 
+15. Review the application components, where AWS Resilience Hub supports services such as EC2 instance, Lambda function. Then click **Publish new version** button. Click **Publish** button in the pop up window to confirm.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/publish-new-version.png)
+
+16. Click the **Assess resiliency** button to initiate the application resiliency assessment through AWS Resilience Hub. Click **Run** button in the pop up window to confirm.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/assess-resiliency.png)
+
+17. 
+
+18.
 
 ### Step6: Tear Down
 
