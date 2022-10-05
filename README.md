@@ -1,4 +1,4 @@
-# **Build resilient applications using AWS Backup**
+# **Build resilient applications using AWS Backup and AWS Resilience Hub**
 
 This lab is provided as part of **[AWS Innovate For Every Application Edition](https://aws.amazon.com/events/aws-innovate/apj/for-every-app/)**
 
