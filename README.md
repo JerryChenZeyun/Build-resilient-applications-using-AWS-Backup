@@ -10,11 +10,13 @@ Click [here](https://github.com/phonghuule/aws-innovate-fea-2022) to explore the
 
 This lab was derived from one of **Well-Architected Reliability Labs** named [TESTING BACKUP AND RESTORE OF DATA](https://wellarchitectedlabs.com/reliability/200_labs/200_testing_backup_and_restore_of_data/) in AWS Well-Architected Lab with latest update.
 
-The purpose of this lab is to teach you how to use [AWS backup](https://aws.amazon.com/backup/) to achieve automatic data backup, so as to build resilient applications with well defined data backup strategy.
+The purpose of this lab is to teach you how to use [AWS backup](https://aws.amazon.com/backup/) to achieve automatic data backup, alongside resiliency assessment genearted from [AWS Resilience Hub](https://aws.amazon.com/resilience-hub/) so as to build resilient applications with well defined data backup strategy.
 
 Create backup of the data is just first step to enhance data resilience. You as data owner must also test these backups to ensure they can be used to recover data. A backup is useless if you are unable to restore your data from it. Testing the restore process after each backup will ensure you are aware of any issues that might arise during a restore down the line.
 
 In this lab, you will create an EC2 Instance as a data source. You will then create a strategy to backup these data sources periodically using AWS Backup, and finally, automate the testing of the restore process as well as cleanup of resources using AWS Lambda.
+
+Then you will use AWS Resilience Hub to create application resilience report against the RTO/RPO requirements you define, and receive recommendations from the service to enhance the resiliency of the application.
 
 The skills you learn will help you define a backup and restore plan in alignment with the [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/?wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc&wa-guidance-whitepapers.sort-by=item.additionalFields.sortDate&wa-guidance-whitepapers.sort-order=desc).
 
@@ -22,6 +24,7 @@ The skills you learn will help you define a backup and restore plan in alignment
 * Set up a Backup Strategy to ensure mission-critical data is being backed up regularly
 * Test restoring from EC2 image backups to ensure there are no data recovery issues
 * Learn how to automate this process
+* Getting resiliency assessment report for the application
 
 ## Prerequisites:
 * An [AWS Account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) that you are able to use for testing, that is not used for production or other purposes.
