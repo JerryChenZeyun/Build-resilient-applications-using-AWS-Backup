@@ -249,7 +249,9 @@ https://us-east-1.console.aws.amazon.com/resiliencehub/home?region=us-east-1#/ho
 
 
 2. Click the **Add Application** button to add the web application you've deployed to AWS Resilience Hub.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/lambda-code.png)
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/resilience-hub-add-app.png)
+
+3. In the **Discover application structure** page, select **CloudFormation stacks**, 
 
 
 ### Step6: Tear Down
