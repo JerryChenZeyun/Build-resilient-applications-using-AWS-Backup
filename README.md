@@ -269,7 +269,17 @@ In this optional step, you will use Resilience Hub to assess and improve the res
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create-policy.png)
 
 10. Choose the **Select a policy based on a suggested policy**, so it allows you to use a RTO/RPO template to define the resiliency policy.
+
+11. Give the policy a name, e.g. **WA-LAB-RESILIENCY-POLICY**, with a description (optional).
+
+12. Under the **Suggested resiliency policies**, select the **Important Application**. This sets the RTO (2 days) and RPO (2h) for the resiliency policy. Then click **Create** button.
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create-resiliency-policy-details.png)
+
+13. Click the [Applications](https://us-east-1.console.aws.amazon.com/resiliencehub/home?region=us-east-1#/applications) on the left of the page. Select the **WEB-WA-APP**.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/SELECT-APP.png)
+
+14. Click the **Publish application** button.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/publish-app.png)
 
 
 ### Step6: Tear Down
