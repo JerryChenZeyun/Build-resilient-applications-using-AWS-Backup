@@ -260,8 +260,11 @@ In this optional step, you will use Resilience Hub to assess and improve the res
 6. Tick the check box under the **Scheduled assessment**.
 
 7. Review the above settings, then click **Next** button.
-
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/discover-app-structure.png)
+
+8. In the **Identify resources** page, it might take sometime to discover all existing resources from the Applciation Cloudformation Stack. Once it's done, all relevant resources will be shown up in the page as below. Review the resources (EC2 Instance and Lambda Function) then click **Next**.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/identify-resources.png)
+
 
 
 ### Step6: Tear Down
