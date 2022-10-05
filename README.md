@@ -265,6 +265,11 @@ In this optional step, you will use Resilience Hub to assess and improve the res
 8. In the **Identify resources** page, it might take sometime to discover all existing resources from the Applciation Cloudformation Stack. Once it's done, all relevant resources will be shown up in the page as below. Review the resources (EC2 Instance and Lambda Function) then click **Next**.
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/identify-resources.png)
 
+9. In the **Select policy** page, you can click the **Create resiliency policy** button to create the resiliency policy.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create-policy.png)
+
+10. Choose the **Select a policy based on a suggested policy**, so it allows you to use a RTO/RPO template to define the resiliency policy.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create-resiliency-policy-details.png)
 
 
 ### Step6: Tear Down
