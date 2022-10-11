@@ -359,7 +359,7 @@ The following instructions will remove the resources that you have created in th
 
 ## Survey
 
-Let us know what you thought of this lab and how we can improve the experience for you in the future by completing [this session poll](https://amazonmr.au1.qualtrics.com/jfe/form/SV_ehwTCMiRy46skbY?Session=HOL005). Participants who complete the surveys from AWS Innovate - Modern Applications Edition will receive a gift code for USD25 in AWS credits1, 2 & 3. AWS credits will be sent via email by November 30, 2022.
+Let us know what you thought of this lab and how we can improve the experience for you in the future by completing [this session poll](https://amazonmr.au1.qualtrics.com/jfe/form/SV_ehwTCMiRy46skbY?Session=HOL005). Participants who complete the surveys from AWS Innovate - Modern Applications Edition will receive a gift code for USD25 in AWS credits 1, 2 & 3. AWS credits will be sent via email by November 30, 2022.
 
 **Note:** Only registrants of AWS Innovate - Modern Applications Edition who complete the surveys will receive a gift code for USD25 in AWS credits via email.
 
