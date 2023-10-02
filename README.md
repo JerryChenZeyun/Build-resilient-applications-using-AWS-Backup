@@ -251,13 +251,16 @@ You can take this additional step to use Resilience Hub to assess and improve th
 2. Click the **Add Application** button to add the web application you've deployed to AWS Resilience Hub.
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/resilience-hub-add-app.png)
 
-3. In the **Discover application structure** page, select **CloudFormation stacks**.
+3. Give it a name to the **Application name**, such as **WEB-WA-APP**, with an app description (optional). Leave all as default in the **How is this application managed** section.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/resilience-hub-app-name-2023.png)
 
-4. Select **WA-Backup-Lab** CloudFormation stack in the **Select stacks**.
+4. In the **Add resource collections** section, select **CloudFormation stacks**.
 
-5. Give it a name to the **Application name**, such as **WEB-WA-APP**, with an app description (optional).
+5. Select **WA-Backup-Lab** CloudFormation stack in the **Select stacks**.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/select-cfn-stack-2023.png)
 
-6. Tick the check box under the **Scheduled assessment**.
+6. Leave all settings as default in the **Set RTO and RPO** section.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/rto-rpo-settings-2023.png)
 
 7. Review the above settings, then click **Next** button.
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/discover-app-structure.png)
