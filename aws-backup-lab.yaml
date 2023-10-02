@@ -13,6 +13,20 @@ Parameters:
     Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
     Default: /aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2
 Resources:
+  ResilienceHubRole:
+      Type: AWS::IAM::Role
+      Properties:
+        RoleName: AWS-WA-Lab-Resilience-Hub-Role
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Principal:
+              Service: resiliencehub.amazonaws.com
+            Action:
+            - sts:AssumeRole
+        ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AWSResilienceHubAsssessmentExecutionPolicy
   BackupRole:
       Type: AWS::IAM::Role
       Properties:
