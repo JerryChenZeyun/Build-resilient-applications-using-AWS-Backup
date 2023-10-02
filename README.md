@@ -115,7 +115,7 @@ Under **RESOURCE SELECTION**, you can specify resources to be backed up individu
 
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/assign-resources-2023.png)
 
-#### 2.8 Complete Resource Assignment
+#### 2.7 Complete Resource Assignment
 Click the **Continue** button to complete the Resource Assignment.
 
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/resource-assignment-continue.png)
