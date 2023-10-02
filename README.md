@@ -83,14 +83,14 @@ Give the Backup Rule a name, such as **BACKUP-LAB-RULE**.
 Click the **Create new Backup vault** button. 
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/click-create-backup-vault.png)
 
-In the popup window, input the **BACKUP VAULT NAME**, such as **BACKUP-LAB-VAULT**.
+In the **Create backup vault** window, input the **BACKUP VAULT NAME**, such as **BACKUP-LAB-VAULT**.
 
 
 You can choose to encrypt your backups for additional security by specifying a KMS key. You can choose the default key created and managed by AWS Backup or specify your own custom key. For this exercise, select the default key (default) aws/backup.
 
 
 Then click **CREATE BACKUP VAULT**.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create-backup-vault-popup.png)
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create-backup-vault-2023.png)
 
 #### 2.5 Complete the Backup plan creation
 Once the Backup Vault has been created, you can set a **SCHEDULE** for the backup, you can specify the **FREQUENCY** at which backups are taken. You can enter frequency as every 12 hours, Daily, Weekly, or Monthly. Alternatively, you can specify a custom **CRON EXPRESSION** for your backup frequency. For this exercise, select the **FREQUENCY** as **DAILY**.
