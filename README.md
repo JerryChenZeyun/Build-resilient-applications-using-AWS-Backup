@@ -179,7 +179,10 @@ https://us-east-1.console.aws.amazon.com/backup/home?region=us-east-1#home
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/backup-job-completed-2023.png)
 
 12. Monitor your email to see if you receive a **Notification from AWS Backup**. Compare details in the email to what you see on the AWS Console, they should match. It takes about 10 mins for the email to show up once the backup job has completed.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/sns-notification.png)
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/backup-job-completed-email-2023.png)
+
+**Note: If you haven't received the backup job completion notification email, please check if you have clicked the "Confirm subscription" link in the subscription email sent upon the completion of the CloudFormation as shown below:**
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/confirmed-notification-email-2023.png)
 
 13. The SNS Topic that was created as part of the CloudFormation stack has been configured as a trigger for the Lambda function. When AWS Backup publishes a new message when a backup or restore job is completed, the Lambda function gets invoked.
 
