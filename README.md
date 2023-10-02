@@ -176,7 +176,7 @@ https://us-east-1.console.aws.amazon.com/backup/home?region=us-east-1#home
 10. Periodically refresh the console until the **STATUS** changes to **COMPLETED**. It should take about 5-10 minutes to complete.
 
 11. After the job is completed, click on the **JOB ID** and view the **DETAILS**. You should see the **Recovery Point ARN** that was created, the **RESOURCE ID** for which the backup was created, and the **RESOURCE TYPE** for which the backup was created.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/backup-job-completed.png)
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/backup-job-completed-2023.png)
 
 12. Monitor your email to see if you receive a **Notification from AWS Backup**. Compare details in the email to what you see on the AWS Console, they should match. It takes about 10 mins for the email to show up once the backup job has completed.
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/sns-notification.png)
