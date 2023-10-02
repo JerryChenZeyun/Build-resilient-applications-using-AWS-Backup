@@ -105,18 +105,15 @@ Leave the other configuration as **DEFAULT**. And then click **Create Plan** but
 
 Once the backup plan and the backup rule has been created, you can specify resources to back up. You can select individual resources to be backed up, or specify a tag (key-value) associated with the resource. AWS Backup will execute backup jobs on all resources that match the tags specified.
 
-#### 2.6 Review the BACKUP PLAN that's been created
-Click on **BACKUP PLANS** from the menu on the left side of the screen. Select the backup plan **BACKUP-LAB** that you just created.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/backup-lab-assign-resource.png)
-
-#### 2.7 Set up the Resource Assignment for Backup Plan
-Specify a **RESOURCE ASSIGNMENT NAME** such as **BACKUP-RESOURCES** to help identify the resources that are being backed up.
+#### 2.6 Set up the Resource Assignment for Backup Plan
+You can continue to specify a **RESOURCE ASSIGNMENT NAME** such as **BACKUP-RESOURCES** to help identify the resources that are being backed up.
+(If you are not on the **Assign resources** page, then you can click on **BACKUP PLANS** from the menu on the left side of the screen, select the backup plan **BACKUP-LAB** that you just created. Then you will find the **Resource assignments** section, then you can click the **Assign resources** button.)
 
 Leave the **DEFAULT ROLE** selected for **IAM ROLE**. If a role does not already exist, the AWS Backup service will create one with the necessary permissions.
 
 Under **RESOURCE SELECTION**, you can specify resources to be backed up individually by specifying the **RESOURCE TYPE** and **RESOURCE ID**, or select TAGS and enter the TAG KEY and the TAG VALUE. For this lab, select TAGS key as **workload**, Condition for value as **Equals**, and the Value as **myapp**. This tag and value was created by the CloudFormation stack. Remember that tags are case sensitive and ensure that the values you enter are all in lower case.
 
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/resource-assignment.png)
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/assign-resources-2023.png)
 
 #### 2.8 Complete Resource Assignment
 Click the **Continue** button to complete the Resource Assignment.
