@@ -226,17 +226,8 @@ http://<PUBLIC_IP_OF_THE_NEW_INSTANCE>/
 
 19. Monitor your email to see if you have received a **Restore Test Status** notification confirming the deletion of the newly created resource. Check the EC2 Console to verify that the new EC2 Instance has been terminated. - <br />https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Volumes:sort=size
 
-20. Use your administrator account to access the AWS CloudWatch console -<br /> https://console.aws.amazon.com/cloudwatch/home?region=us-east-1
-
-21. Click on **LOGS** from the menu on the left side.
-
-22. For filter, paste the following string after replacing the value for the name of the CloudFormation stack that was created as part of this lab.
-
-```
-/aws/lambda/RestoreTestFunction-<YOUR CLOUDFORMATION STACK NAME>
-```
-
-23. Click on the **LOG STREAM** and view the output of the Lambda function’s execution to understand the different steps performed by the function to automate this process.
+If you see the EC2 instance still up and running, it means the lambda function is in progress to terminate the instance.
+Please give it some time and check back again.
 
 #### Review of Best Practices Implemented
 
