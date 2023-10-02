@@ -67,7 +67,9 @@ Now you will create a backup strategy by leveraging AWS Backup, a fully managed 
 #### 2.1 [Sign in to the AWS Backup console](https://us-east-1.console.aws.amazon.com/backup/home?region=us-east-1#backupplan)
 
 #### 2.2 Choose "CREATE BACKUP PLAN"
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create_backup_plan.png)
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create_backup_plan_2023.png)
+
+Alternatively, you can click the **Backup plans** in the navigation plane, then click the **Create backup plan** button.
 
 #### 2.3 Select the option to BUILD A NEW PLAN
 Specify a **Backup plan name** such as **BACKUP-LAB**.
