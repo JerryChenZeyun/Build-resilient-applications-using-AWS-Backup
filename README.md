@@ -244,7 +244,7 @@ Please give it some time and check back again.
 
 You can take this additional step to use Resilience Hub to assess and improve the resiliency of the application architecture based on its recommendations.
 
-1. Sign in to the AWS Management Console and navigate to the AWS Backup console - <br />
+1. Sign in to the AWS Management Console and navigate to the AWS Resilience Hub console - <br />
 (https://us-east-1.console.aws.amazon.com/resiliencehub/home?region=us-east-1#/homepage)
 
 
@@ -259,50 +259,63 @@ You can take this additional step to use Resilience Hub to assess and improve th
 5. Select **WA-Backup-Lab** CloudFormation stack in the **Select stacks**.
 ![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/select-cfn-stack-2023.png)
 
-6. Leave all settings as default in the **Set RTO and RPO** section.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/rto-rpo-settings-2023.png)
+6. In the **Set RTO and RPO** section, change the **RPO** to **1 days** in the **RTO/RPO targets** sub section. 
+Likewise, change **RPO** to **1 days** in **Infrastructure** and **Availability Zone** sub sections.
+In this case, we assume this is a medium business priority application, which can bear with 1 day RPO target.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/rto-rpo-1-day-2023.png)
 
-7. Review the above settings, then click **Next** button.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/discover-app-structure.png)
+7. In the **Set up permissions**, choose **Use an IAM role**, and select **AWS-WA-Lab-Resilience-Hub-Role** option in the drop-down list.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/resilience-hub-iam-role-2023.png)
 
-8. In the **Identify resources** page, it might take sometime to discover all existing resources from the Applciation Cloudformation Stack. Once it's done, all relevant resources will be shown up in the page as below. Review the resources (EC2 Instance and Lambda Function) then click **Next**.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/identify-resources.png)
+8. Leave all settings in the rest sections as default, and click the **Add application** button at the bottom of the page. This will generate an application in the Resilience Hub.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/resilience-hub-add-app-2023.png)
 
-9. In the **Select policy** page, you can click the **Create resiliency policy** button to create the resiliency policy.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create-policy.png)
+9. In the **Applications** page, click the **Publish application** button complete the application publishing.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/application-publishing-2023.png)
 
-10. Choose the **Select a policy based on a suggested policy**, so it allows you to use a RTO/RPO template to define the resiliency policy.
+10. Once the application is published, click the **Assess resiliency** button to complete the assessment.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/resiliency-assessment-2023.png)
 
-11. Give the policy a name, e.g. **WA-LAB-RESILIENCY-POLICY**, with a description (optional).
+11. Click the **Run** button in the pop up window to run the assessment.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/run-assessment-pop-up-2023.png)
 
-12. Under the **Suggested resiliency policies**, select the **Important Application**. This sets the RTO (2 days) and RPO (4 hours) for the resiliency policy. Then click **Create** button.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create-resiliency-policy-details.png)
+12. After couple seconds, the assessment will be completed. You should notice there's a policy breached in the Compliance status. You can click the **Assessment Name** to investigate the Assessment report details.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/policy-breached-2023.png)
 
-13. Select the **WA-LAB-RESILIENCY-POLICY**, then click **Next** button.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/select-policy-button.png)
+13. By investigating the Assessment reports, you can see the reason for policy breach is that the application is unrecoverable. 
+And if you click the **Resiliency recommendations** tab, you will find Resilience Hub recommend to set up a dead-letter queue (DLQ) for the Amazon SNS, so to enable subscriptions to re-try the failed deliveries later. In this case, the application can achieve the RPO resilient goal.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/application-unrecoverable-2023.png)
 
-14. Review the application configuration, and then click **Publish** button in the **Review and publish** page.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/publish-app-with-policy.png)
+14. To meet the RPO goals, we will configure the dead-letter queue for the SNS subscriptions. Search **SQS** in the console search bar, and go to the Amazon SQS console. Click the **Create queue** button.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/sqs-create-queue-2023.png)
 
-15. Click the **Assess resiliency** button in the application page to initiate the application resiliency assessment through AWS Resilience Hub. Click **Run** button in the pop up window to confirm.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/assess-resiliency.png)
+15. Give the Amazon SQS queue a name, such as **WA-dead-letter-queue**.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/name-sqs-queue-2023.png)
 
-16. After couple seconds, the assessment report will be generated. click the report in the **Resiliency assessment** section.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/assessment-report.png)
+16. Leave all other settings as default, and click the **Create queue** button to create the Amazon SQS queue.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/create-sqs-queue-2023.png)
 
-17. You will find the assessment result in the report, which shows that the **WEB-WA-APP** application setup meets with the preset RTO/RPO requirements. It will also shows the estimated time for RTO/RPO. There're other metrics for cloud infrastructure RTO/RPO and Availability Zone RTO/RPO data available for reference.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/rto-rpo-result.png)
+17. Go back to Amazon SNS console, click the **Subscription** in the menu, search the topic **BackupNotificationTopic-WA-Backup-Lab**, where you will see 2 subsriptions for this topic. Then select the first subscription, and click the **Edit** button.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/edit-sub1-2023.png)
 
-18. Click on the **Resiliency recommendations** tab, you can find out more recommendations automatically generated by AWS Resilience Hub, with suggestions on Availability Zone setup, Estimated cost, Auto scaling group, etc.
+18. In the **Edit subscription** page, extend the **Redrive policy** option, enable the **Redrive policy (dead-letter queue)**, and select the **WA-dead-letter-queue** SQS ARN in the drop-down list. Then click the **Save changes** button.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/config-dlq-sub1-2023.png)
 
+19. Repeat steps 17-18 to enable **Redrive policy (dead-letter queue)** for the other subscription of the SNS topic **BackupNotificationTopic-WA-Backup-Lab**.
+
+20. Once the dead-letter queue has been enabled for both subscriptions of the SNS topic, you can move back to the AWS Resilience Hub console, and click the **Applications** in the menu, select the **WEB-WA-APP** application, and click the **Reassess** button to complete the re-assessment. 
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/reassess-app-2023.png)
+
+21. Click the **Run** button in the pop-up window to execute the re-assessment. After couple seconds, you will see the assessment report, with **Policy met** in the **Compliance status**.
+![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/compliant-state-2023.png)
+
+You may exlore the other resiliency and operational recommendations from AWS Resilience Hub. 
 Please note that for the sake of simplicity, this lab application utilises a monolithic architecture instead of distributed one. So in practice, you can expect those distributed web application will receive more comprehensive resiliency recommendations from the AWS Resilience Hub.
-![Image of Yaktocat](https://github.com/JerryChenZeyun/Build-resilient-applications-using-AWS-Backup/blob/main/images/resiliency-recommendation.png)
-
 
 #### Review of Best Practices Implemented
 
 ** You have utilised **AWS Resilience Hub** to automatically collect application information through the Cloudformation stack used to implement the application.
-** You have defined a policy to define RTO/RPO requirements for the specific application
+** You have defined a policy to specify RTO/RPO requirements for the specific application
 ** **AWS Resilience Hub** conducts automatic assessment to generate resiliency report, with the assessment data to showcase if the defined RTO/RPO requirements have been met, alongside relevant optimization suggestions to achieve better application resiliency. 
 
 
@@ -310,7 +323,7 @@ Please note that for the sake of simplicity, this lab application utilises a mon
 
 The following instructions will remove the resources that you have created in this lab.
 
-#### Cleaning up AWS Resilience Hub Resources
+#### Cleaning up AWS Resilience Hub resources
 
 1. Sign in to the AWS Management Console and navigate to the AWS Backup console - <br />https://us-east-1.console.aws.amazon.com/resiliencehub/home?region=us-east-1#/dashboard
 
@@ -322,7 +335,13 @@ The following instructions will remove the resources that you have created in th
 
 5. Type in **Delete** in the pop up window to proceed.
 
-#### Cleaning up AWS Backup Resources
+#### Cleaning up AWS SQS resources
+
+1. Sign in to the AWS Management Console and navigate to the AWS Backup console - <br />https://us-east-1.console.aws.amazon.com/sqs/v2/home?region=us-east-1#/homepage
+
+2. Click on **Queues** and select the **WA-dead-letter-queue** you've created, then click **Delete**, type in **confirm** in the pop-up window, and click the **Delete** button.
+
+#### Cleaning up AWS Backup resources
 
 1. Sign in to the AWS Management Console and navigate to the AWS Backup console - <br />https://us-east-1.console.aws.amazon.com/backup/home?region=us-east-1#home
 
@@ -338,7 +357,7 @@ The following instructions will remove the resources that you have created in th
 
 7. Delete the **BACKUP PLAN** by clicking on **DELETE** on the upper right corner of the screen.
 
-#### Cleaning up the CloudFormation Stack
+#### Cleaning up the CloudFormation stack
 
 1. Sign in to the AWS Management Console and navigate to the AWS CloudFormation console -<br /> https://console.aws.amazon.com/cloudformation/
 
@@ -355,10 +374,4 @@ The following instructions will remove the resources that you have created in th
 4. Click the **Actions Button** then click **Delete Log Group**.
 
 5. Verify the log group name then click **Delete**.
-
-
-
-
-
-
 
