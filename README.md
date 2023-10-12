@@ -1,16 +1,15 @@
 # **Build resilient applications using AWS Backup and AWS Resilience Hub**
 
-This lab is provided as part of **[AWS Innovate For Every Application Edition](https://aws.amazon.com/events/aws-innovate/apj/for-every-app/)**
-
-Click [here](https://github.com/phonghuule/aws-innovate-fea-2022) to explore the full list of hands-on labs.
+This lab is provided as part of **[AWS Innovate Modern Applications Edition](https://aws.amazon.com/events/aws-innovate/apj/modern-apps/)**. 
 
 ℹ️ You will run this lab in your own AWS account. Please follow directions at the end of the lab to remove resources to avoid future costs.
 
+ℹ️ Please let us know what you thought of this session and how we can improve the experience for you in the future by completing [the survey](#survey) at the end of the lab.
+Participants who complete the surveys from AWS Innovate Online Conference will receive a gift code for USD25 in AWS credits <sup> 1, 2 & 3 </sup>.
+
 ## Introduction
 
-This lab was derived from one of **Well-Architected Reliability Labs** named [TESTING BACKUP AND RESTORE OF DATA](https://wellarchitectedlabs.com/reliability/200_labs/200_testing_backup_and_restore_of_data/) in AWS Well-Architected Lab with latest update.
-
-The purpose of this lab is to teach you how to use [AWS backup](https://aws.amazon.com/backup/) to achieve automatic data backup, alongside resiliency assessment genearted from [AWS Resilience Hub](https://aws.amazon.com/resilience-hub/) so as to build resilient applications with well defined data backup strategy.
+This lab is to guide you on using [AWS backup](https://aws.amazon.com/backup/) to achieve automatic data backup, alongside resiliency assessment genearted from [AWS Resilience Hub](https://aws.amazon.com/resilience-hub/) so as to build resilient applications with well defined data backup strategy.
 
 Create backup of the data is just first step to enhance data resilience. You as data owner must also test these backups to ensure they can be used to recover data. A backup is useless if you are unable to restore your data from it. Testing the restore process after each backup will ensure you are aware of any issues that might arise during a restore down the line.
 
